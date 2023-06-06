@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandas Nacionais</title>
+
+    <style>
+        body{
+            background-color: rgb(219, 219, 219);
+            padding-left: 20px;
+        }
+
+        main{
+            padding-top: 10px;
+        }
+
+       
+       
+    </style>
+
+</head>
+<body>
+
+    <h1>Escolha sua banda</h1>
+    <hr>
+    <br>
+
+    <main>
+
+    <form action="">
+
+      <input type="radio" name="banda" value="Banda Djavu"> Banda Djavu
+      <br>
+
+      <input type="radio" name="banda" value="Legião Urbana"> Legião urbana
+      <br>
+
+      <input type="radio" name="banda" value="Mamonas Assasinas"> Mamonas assasinas
+      <br>
+
+      <input type="submit" name="enviar" id="btnEnviar" value="Enviar">
+
+
+    </form>
+
+    </main>
+
+    <script>
+ 
+        document.getElementById('btnEnviar').onclick = function(){
+
+         var radio = document.getElementsByName('banda');
+         for (var i = 0; i < radio.length; i++){
+
+            if(radio[i].checked){
+                console.log( radio[i].value);
+
+                if(radio[i].value === "Banda Djavu"){
+                    window.open('djavu.html')
+                }else if(radio[i].value === "Legião Urbana"){
+                    window.open('legiao.html')
+
+                }else{
+                    window.open('mamonas.html')
+                }
+
+                }
+
+
+            }
+         }
+
+        
+
+    </script>
+    
+   
+
+</body>
+</html>
